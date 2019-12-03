@@ -12,6 +12,14 @@ import CoreImage
 
 class ImagePostViewController: ShiftableViewController {
     
+    // MARK: Properties
+    var postController: PostController!
+    var post: Post?
+    var imageData: Data?
+    
+    private let context = CIContext(options: nil)
+    private var vibranceFilter = CIFilter(name: "CIVibrance")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -113,15 +121,38 @@ class ImagePostViewController: ShiftableViewController {
         view.layoutSubviews()
     }
     
-    var postController: PostController!
-    var post: Post?
-    var imageData: Data?
-    
+    // MARK: Outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var chooseImageButton: UIButton!
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var postButton: UIBarButtonItem!
+    
+    // MARK: Sliders
+    @IBAction func vibranceSlider(_ sender: UISlider) {
+    }
+    
+    
+    private func filterImage(_ image: UIImage) -> UIImage {
+
+        guard let cgImage = image.cgImage else { return image }
+
+        let ciImage = CIImage(cgImage: cgImage)
+
+        // MARK: Set the filtere values
+        // You can use this for any filter you want to use
+        vibranceFilter.setValue(ciImage, forKey: "inputImage")
+//        vibranceFilter.setValue(saturationSlider.value, forKey: "inputAmount")
+//        vibranceFilter.setValue(brightnessSlider.value, forKey: "inputBrightness")
+//        vibranceFilter.setValue(contrastSlider.value, forKey: "inputContrast")
+
+        guard let outputCIImage = vibranceFilter.outputImage else { return image }
+
+        let bounds = CGRect(origin: CGPoint.zero, size: image.size)
+        guard let outputCGImage = context.createCGImage(outputCIImage, from: bounds) else { return image }
+
+        return UIImage(cgImage: outputCGImage)
+    }
 }
 
 extension ImagePostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
