@@ -30,6 +30,7 @@
 		46D571F52173CF3E00E7FF73 /* UIImage+Ratio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D571F42173CF3E00E7FF73 /* UIImage+Ratio.swift */; };
 		46D571F82173FC2700E7FF73 /* ImagePostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */; };
 		E453457955DF907FCBD117F1 /* Pods_LambdaTimeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA39CACB677861CF84322FB5 /* Pods_LambdaTimeline.framework */; };
+		FA74942E239719AB0044F0BB /* AudioCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA74942D239719AB0044F0BB /* AudioCommentViewController.swift */; };
 		FA8112EA239602E1007BB782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA8112E9239602E0007BB782 /* GoogleService-Info.plist */; };
 		FA8112EC2396168E007BB782 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8112EB2396168E007BB782 /* UIImage+Scaling.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostDetailTableViewController.swift; sourceTree = "<group>"; };
 		5D2CCD6C68779B0A70AC37FA /* Pods-LambdaTimeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LambdaTimeline.release.xcconfig"; path = "Pods/Target Support Files/Pods-LambdaTimeline/Pods-LambdaTimeline.release.xcconfig"; sourceTree = "<group>"; };
 		AA39CACB677861CF84322FB5 /* Pods_LambdaTimeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LambdaTimeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA74942D239719AB0044F0BB /* AudioCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCommentViewController.swift; sourceTree = "<group>"; };
 		FA8112E9239602E0007BB782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA8112EB2396168E007BB782 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				46A0366921700F5100E7FF73 /* PostsCollectionViewController.swift */,
 				46CFE6F421707D0000E7FF73 /* ImagePostViewController.swift */,
 				46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */,
+				FA74942D239719AB0044F0BB /* AudioCommentViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				464637992170048900E7FF73 /* FirebaseConvertible.swift in Sources */,
 				46A0366A21700F5100E7FF73 /* PostsCollectionViewController.swift in Sources */,
 				46D571F52173CF3E00E7FF73 /* UIImage+Ratio.swift in Sources */,
+				FA74942E239719AB0044F0BB /* AudioCommentViewController.swift in Sources */,
 				46463792216FFDD900E7FF73 /* Comment.swift in Sources */,
 				46CFE6F721707FA600E7FF73 /* UIViewController+InformationalAlert.swift in Sources */,
 			);
