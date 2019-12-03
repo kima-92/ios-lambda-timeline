@@ -110,9 +110,70 @@
                     <view key="view" contentMode="scaleToFill" id="pgK-UA-8h9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sWh-Wb-jXl">
+                                <rect key="frame" x="22.5" y="197" width="330" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fsC-b1-IqL">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nm-52-BZE">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="playButtonPressed:" destination="oIK-NA-n9G" eventType="touchUpInside" id="oQo-1P-Xyq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-oP-MEX">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="30"/>
+                                                <state key="normal" title="Record"/>
+                                                <connections>
+                                                    <action selector="recordButtonPressed:" destination="oIK-NA-n9G" eventType="touchUpInside" id="l1y-7S-Si8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JDY-eh-1mq">
+                                        <rect key="frame" x="0.0" y="150" width="330" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-t8-htm">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-xO-Qn3">
+                                                <rect key="frame" x="52" y="0.0" width="226" height="31"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-rC-2n0">
+                                                <rect key="frame" x="284" y="0.0" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n35-lj-s2N">
+                                        <rect key="frame" x="0.0" y="260" width="330" height="30"/>
+                                        <state key="normal" title="Post Audio Comment"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sWh-Wb-jXl" firstAttribute="centerX" secondItem="pgK-UA-8h9" secondAttribute="centerX" id="EgB-mP-Sli"/>
+                            <constraint firstItem="Qcm-cy-HVq" firstAttribute="bottom" secondItem="sWh-Wb-jXl" secondAttribute="bottom" constant="180" id="Iai-8Q-UGU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qcm-cy-HVq"/>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="7Nm-52-BZE" id="38C-Ni-e4c"/>
+                        <outlet property="recordButton" destination="tPb-oP-MEX" id="e6D-3w-bye"/>
+                        <outlet property="timeLabel" destination="4y2-t8-htm" id="8oB-D0-bFT"/>
+                        <outlet property="timeRemainingLabel" destination="gue-rC-2n0" id="fT9-l0-PAV"/>
+                        <outlet property="timeSlider" destination="C0H-xO-Qn3" id="Rtr-Vq-wOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kB-f7-bMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
