@@ -127,10 +127,12 @@ class ImagePostViewController: ShiftableViewController {
     @IBOutlet weak var chooseImageButton: UIButton!
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var postButton: UIBarButtonItem!
+    @IBOutlet weak var vibranceSlider: UISlider!
     
     // MARK: Sliders
-    @IBAction func vibranceSlider(_ sender: UISlider) {
+    @IBAction func vibranceChanged(_ sender: UISlider) {
     }
+    
     
     
     private func filterImage(_ image: UIImage) -> UIImage {
@@ -142,7 +144,7 @@ class ImagePostViewController: ShiftableViewController {
         // MARK: Set the filtere values
         // You can use this for any filter you want to use
         vibranceFilter.setValue(ciImage, forKey: "inputImage")
-//        vibranceFilter.setValue(saturationSlider.value, forKey: "inputAmount")
+        vibranceFilter.setValue(vibranceSlider.value, forKey: "inputAmount")
 //        vibranceFilter.setValue(brightnessSlider.value, forKey: "inputBrightness")
 //        vibranceFilter.setValue(contrastSlider.value, forKey: "inputContrast")
 

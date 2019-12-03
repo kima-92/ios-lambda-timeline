@@ -164,7 +164,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-EG-MSh">
                                                 <rect key="frame" x="74" y="0.0" width="142" height="31"/>
                                                 <connections>
-                                                    <action selector="vibranceSlider:" destination="1Aw-4e-BW2" eventType="valueChanged" id="E2t-cR-dHp"/>
+                                                    <action selector="vibranceChanged:" destination="1Aw-4e-BW2" eventType="valueChanged" id="4bB-rn-iFk"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -203,6 +203,7 @@
                         <outlet property="imageView" destination="4eK-5F-H5h" id="e7m-c5-Xhz"/>
                         <outlet property="postButton" destination="hsH-Uv-tug" id="ZBn-KE-cpU"/>
                         <outlet property="titleTextField" destination="Op6-OA-6Ou" id="JEe-cj-4mv"/>
+                        <outlet property="vibranceSlider" destination="8f7-EG-MSh" id="xwa-3G-H1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXa-A2-VJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
