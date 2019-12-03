@@ -418,6 +418,42 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YSC-zq-Lct" customClass="AudioCommentTableViewCell" customModule="LambdaTimeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="188.5" width="375" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AudioCommentCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YSC-zq-Lct" id="9Vy-MO-YNT" customClass="AudioCommentTableViewCell" customModule="LambdaTimeline" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArL-QG-96B">
+                                            <rect key="frame" x="16" y="11" width="45" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-AM-wXV">
+                                            <rect key="frame" x="320" y="0.0" width="30" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="▶️"/>
+                                            <connections>
+                                                <action selector="playButtonPressed:" destination="0Gp-v3-giy" eventType="touchUpInside" id="rcg-fr-Nud"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cCA-AM-wXV" firstAttribute="top" secondItem="9Vy-MO-YNT" secondAttribute="top" id="2D5-28-O3a"/>
+                                        <constraint firstAttribute="trailing" secondItem="cCA-AM-wXV" secondAttribute="trailing" constant="25" id="4Xo-pl-0f9"/>
+                                        <constraint firstAttribute="bottom" secondItem="cCA-AM-wXV" secondAttribute="bottom" id="8zq-IV-Uz8"/>
+                                        <constraint firstItem="ArL-QG-96B" firstAttribute="bottom" secondItem="9Vy-MO-YNT" secondAttribute="bottomMargin" id="BKl-HC-ayL"/>
+                                        <constraint firstItem="ArL-QG-96B" firstAttribute="centerY" secondItem="9Vy-MO-YNT" secondAttribute="centerY" id="NJl-Mq-cHz"/>
+                                        <constraint firstItem="ArL-QG-96B" firstAttribute="top" secondItem="9Vy-MO-YNT" secondAttribute="topMargin" id="aAf-gl-hLg"/>
+                                        <constraint firstItem="ArL-QG-96B" firstAttribute="leading" secondItem="9Vy-MO-YNT" secondAttribute="leadingMargin" id="day-A8-GzF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="ArL-QG-96B" id="WCl-65-lx8"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="OyM-8q-Icp" id="hEW-Hv-MJ8"/>
@@ -439,6 +475,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdL-Y3-4ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0Gp-v3-giy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1968.8" y="472.71364317841085"/>
         </scene>

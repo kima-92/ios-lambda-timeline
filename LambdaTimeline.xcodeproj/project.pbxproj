@@ -33,6 +33,7 @@
 		FA74942E239719AB0044F0BB /* AudioCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA74942D239719AB0044F0BB /* AudioCommentViewController.swift */; };
 		FA8112EA239602E1007BB782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA8112E9239602E0007BB782 /* GoogleService-Info.plist */; };
 		FA8112EC2396168E007BB782 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8112EB2396168E007BB782 /* UIImage+Scaling.swift */; };
+		FAD39E7023972A820011E831 /* AudioCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		FA74942D239719AB0044F0BB /* AudioCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCommentViewController.swift; sourceTree = "<group>"; };
 		FA8112E9239602E0007BB782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA8112EB2396168E007BB782 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
+		FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				46CFE7022171572600E7FF73 /* ImagePostCollectionViewCell.swift */,
+				FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				46CFE7012171559500E7FF73 /* FetchMediaOperation.swift in Sources */,
 				46D571F82173FC2700E7FF73 /* ImagePostDetailTableViewController.swift in Sources */,
 				46CFE7032171572600E7FF73 /* ImagePostCollectionViewCell.swift in Sources */,
+				FAD39E7023972A820011E831 /* AudioCommentTableViewCell.swift in Sources */,
 				4646379C2170091A00E7FF73 /* PostController.swift in Sources */,
 				464637992170048900E7FF73 /* FirebaseConvertible.swift in Sources */,
 				46A0366A21700F5100E7FF73 /* PostsCollectionViewController.swift in Sources */,
