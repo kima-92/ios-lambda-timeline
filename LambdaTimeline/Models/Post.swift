@@ -11,6 +11,7 @@ import FirebaseAuth
 
 enum MediaType: String {
     case image
+    case audioURL
 }
 
 class Post {
@@ -20,7 +21,7 @@ class Post {
         self.ratio = ratio
         self.mediaType = .image
         self.author = author
-        self.comments = [Comment(text: title, author: author)]
+        self.comments = [Comment(text: title, audioURL: nil, author: author)]
         self.timestamp = timestamp
     }
     

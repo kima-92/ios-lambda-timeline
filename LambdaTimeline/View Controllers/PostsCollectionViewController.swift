@@ -57,6 +57,11 @@ class PostsCollectionViewController: UICollectionViewController, UICollectionVie
             loadImage(for: cell, forItemAt: indexPath)
             
             return cell
+        case .audioURL:
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagePostCell", for: indexPath)
+            
+            return cell
         }
     }
     
@@ -73,6 +78,8 @@ class PostsCollectionViewController: UICollectionViewController, UICollectionVie
             guard let ratio = post.ratio else { return size }
             
             size.height = size.width * ratio
+        case .audioURL:
+            return size
         }
         
         return size
