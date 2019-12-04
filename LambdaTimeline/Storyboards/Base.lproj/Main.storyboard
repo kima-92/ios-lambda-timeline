@@ -112,20 +112,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sWh-Wb-jXl">
-                                <rect key="frame" x="22.5" y="197" width="330" height="290"/>
+                                <rect key="frame" x="20.5" y="197" width="334" height="290"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fsC-b1-IqL">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nm-52-BZE">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
                                                 <state key="normal" title="Play"/>
                                                 <connections>
                                                     <action selector="playButtonPressed:" destination="oIK-NA-n9G" eventType="touchUpInside" id="oQo-1P-Xyq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-oP-MEX">
-                                                <rect key="frame" x="0.0" y="40" width="330" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="334" height="30"/>
                                                 <state key="normal" title="Record"/>
                                                 <connections>
                                                     <action selector="recordButtonPressed:" destination="oIK-NA-n9G" eventType="touchUpInside" id="l1y-7S-Si8"/>
@@ -134,7 +134,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JDY-eh-1mq">
-                                        <rect key="frame" x="0.0" y="150" width="330" height="30"/>
+                                        <rect key="frame" x="0.0" y="150" width="334" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-t8-htm">
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
@@ -143,10 +143,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-xO-Qn3">
-                                                <rect key="frame" x="52" y="0.0" width="226" height="31"/>
+                                                <rect key="frame" x="52" y="0.0" width="230" height="31"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-rC-2n0">
-                                                <rect key="frame" x="284" y="0.0" width="46" height="30"/>
+                                                <rect key="frame" x="288" y="0.0" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n35-lj-s2N">
-                                        <rect key="frame" x="0.0" y="260" width="330" height="30"/>
+                                        <rect key="frame" x="0.0" y="260" width="334" height="30"/>
                                         <state key="normal" title="Post Audio Comment"/>
                                     </button>
                                 </subviews>
@@ -178,6 +178,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kB-f7-bMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2806" y="473"/>
+        </scene>
+        <!--Video Post View Controller-->
+        <scene sceneID="2fm-ey-s6e">
+            <objects>
+                <viewController id="5xP-DV-F7F" customClass="VideoPostViewController" customModule="LambdaTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZM-4u-cBI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-s9-PcS">
+                                <rect key="frame" x="129" y="522" width="116" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Record"/>
+                                <state key="selected" image="Stop"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="R8p-Eu-1gw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Oi-u3-Bmx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.8" y="-911.69415292353835"/>
         </scene>
         <!--Title-->
         <scene sceneID="kP9-yp-I8H">
@@ -480,4 +503,8 @@
             <point key="canvasLocation" x="1968.8" y="472.71364317841085"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Record" width="116" height="116"/>
+        <image name="Stop" width="116" height="116"/>
+    </resources>
 </document>

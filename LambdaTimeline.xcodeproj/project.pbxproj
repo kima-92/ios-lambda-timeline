@@ -34,6 +34,7 @@
 		FA8112EA239602E1007BB782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA8112E9239602E0007BB782 /* GoogleService-Info.plist */; };
 		FA8112EC2396168E007BB782 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8112EB2396168E007BB782 /* UIImage+Scaling.swift */; };
 		FAD39E7023972A820011E831 /* AudioCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */; };
+		FAD39E72239854C00011E831 /* VideoPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E71239854C00011E831 /* VideoPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		FA8112E9239602E0007BB782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA8112EB2396168E007BB782 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCommentTableViewCell.swift; sourceTree = "<group>"; };
+		FAD39E71239854C00011E831 /* VideoPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				46CFE6F421707D0000E7FF73 /* ImagePostViewController.swift */,
 				46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */,
 				FA74942D239719AB0044F0BB /* AudioCommentViewController.swift */,
+				FAD39E71239854C00011E831 /* VideoPostViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				46D571F52173CF3E00E7FF73 /* UIImage+Ratio.swift in Sources */,
 				FA74942E239719AB0044F0BB /* AudioCommentViewController.swift in Sources */,
 				46463792216FFDD900E7FF73 /* Comment.swift in Sources */,
+				FAD39E72239854C00011E831 /* VideoPostViewController.swift in Sources */,
 				46CFE6F721707FA600E7FF73 /* UIViewController+InformationalAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
