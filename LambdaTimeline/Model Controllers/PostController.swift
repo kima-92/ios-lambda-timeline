@@ -35,16 +35,29 @@ class PostController {
         }
     }
     
-    func addComment(with text: String, to post: inout Post) {
+    func addTextComment(with text: String, to post: inout Post) { // This func had been called only once
         
         guard let currentUser = Auth.auth().currentUser,
             let author = Author(user: currentUser) else { return }
         
-        let comment = Comment(text: text, author: author)
+        let comment = Comment(text: text, audioURL: nil, author: author)
+//        let comment = Comment(text: text, author: author)
         post.comments.append(comment)
         
         savePostToFirebase(post)
     }
+    
+    func addAudioComment(with audioURL: URL, to post: inout Post) { // This func had been called only once
+            
+            guard let currentUser = Auth.auth().currentUser,
+                let author = Author(user: currentUser) else { return }
+            
+            let comment = Comment(text: nil, audioURL: audioURL, author: author)
+            post.comments.append(comment)
+            
+            savePostToFirebase(post)
+        }
+    
 
     func observePosts(completion: @escaping (Error?) -> Void) {
         
