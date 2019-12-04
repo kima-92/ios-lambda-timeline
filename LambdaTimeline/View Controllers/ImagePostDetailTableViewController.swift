@@ -32,33 +32,93 @@ class ImagePostDetailTableViewController: UITableViewController {
     
     @IBAction func createComment(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Add a comment", message: "Write your comment below:", preferredStyle: .alert)
+//        let alert = UIAlertController(title: "Add a comment", message: "Write your comment below:", preferredStyle: .alert)
+//
+//        var commentTextField: UITextField?
+//
+//        alert.addTextField { (textField) in
+//            textField.placeholder = "Comment:"
+//            commentTextField = textField
+//        }
+//
+//        let addCommentAction = UIAlertAction(title: "Add Comment", style: .default) { (_) in
+//
+//            guard let commentText = commentTextField?.text else { return }
+//
+//            self.postController.addComment(with: commentText, to: &self.post!)
+//
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//        alert.addAction(addCommentAction)
+//        alert.addAction(cancelAction)
+//
+//        present(alert, animated: true, completion: nil)
+    }
+    
+    private func chooseCommentType() {
         
-        var commentTextField: UITextField?
+        let alert = UIAlertController(title: "New Comment", message: "Which kind of comment do you want to create?", preferredStyle: .actionSheet)
         
-        alert.addTextField { (textField) in
-            textField.placeholder = "Comment:"
-            commentTextField = textField
+        let textCommentAction = UIAlertAction(title: "Text", style: .default) { (_) in
+            self.performSegue(withIdentifier: "AddTextPost", sender: nil)
+            //
+            let addTextAleart = UIAlertController(title: "Add a comment", message: "Write your comment below:", preferredStyle: .alert)
+            
+            var commentTextField: UITextField?
+            
+            alert.addTextField { (textField) in
+                textField.placeholder = "Comment:"
+                commentTextField = textField
+            }
+            
+            let addCommentAction = UIAlertAction(title: "Add Comment", style: .default) { (_) in
+                
+                guard let commentText = commentTextField?.text else { return }
+                
+                self.postController.addComment(with: commentText, to: &self.post!)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            addTextAleart.addAction(addCommentAction)
+            addTextAleart.addAction(cancelAction)
+            
+            present(addTextAleart, animated: true, completion: nil)
+            //
+            
         }
         
-        let addCommentAction = UIAlertAction(title: "Add Comment", style: .default) { (_) in
-            
-            guard let commentText = commentTextField?.text else { return }
-            
-            self.postController.addComment(with: commentText, to: &self.post!)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+        let audioCommentAction = UIAlertAction(title: "Audio", style: .default) { (_) in
+            self.performSegue(withIdentifier: "AddAudioPost", sender: nil)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        alert.addAction(addCommentAction)
+        alert.addAction(textCommentAction)
+        alert.addAction(audioCommentAction)
         alert.addAction(cancelAction)
         
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (post?.comments.count ?? 0) - 1
