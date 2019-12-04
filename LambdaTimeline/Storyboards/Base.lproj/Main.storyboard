@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xB5-Kl-GM2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5xP-DV-F7F">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -112,20 +112,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sWh-Wb-jXl">
-                                <rect key="frame" x="20.5" y="197" width="334" height="290"/>
+                                <rect key="frame" x="18.5" y="197" width="338" height="290"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fsC-b1-IqL">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nm-52-BZE">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="30"/>
                                                 <state key="normal" title="Play"/>
                                                 <connections>
                                                     <action selector="playButtonPressed:" destination="oIK-NA-n9G" eventType="touchUpInside" id="oQo-1P-Xyq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-oP-MEX">
-                                                <rect key="frame" x="0.0" y="40" width="334" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="338" height="30"/>
                                                 <state key="normal" title="Record"/>
                                                 <connections>
                                                     <action selector="recordButtonPressed:" destination="oIK-NA-n9G" eventType="touchUpInside" id="l1y-7S-Si8"/>
@@ -134,7 +134,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JDY-eh-1mq">
-                                        <rect key="frame" x="0.0" y="150" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="150" width="338" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-t8-htm">
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
@@ -143,10 +143,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-xO-Qn3">
-                                                <rect key="frame" x="52" y="0.0" width="230" height="31"/>
+                                                <rect key="frame" x="52" y="0.0" width="234" height="31"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-rC-2n0">
-                                                <rect key="frame" x="288" y="0.0" width="46" height="30"/>
+                                                <rect key="frame" x="292" y="0.0" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n35-lj-s2N">
-                                        <rect key="frame" x="0.0" y="260" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="260" width="338" height="30"/>
                                         <state key="normal" title="Post Audio Comment"/>
                                     </button>
                                 </subviews>
@@ -187,16 +187,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-s9-PcS">
-                                <rect key="frame" x="129" y="522" width="116" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-Y9-tvC" customClass="CameraPreviewView" customModule="LambdaTimeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-s9-PcS">
+                                <rect key="frame" x="129.5" y="521" width="116" height="116"/>
                                 <state key="normal" image="Record"/>
                                 <state key="selected" image="Stop"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="5xP-DV-F7F" eventType="touchUpInside" id="PUf-jN-HDM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Ic-Y9-tvC" firstAttribute="top" secondItem="R8p-Eu-1gw" secondAttribute="top" id="6WU-nv-RWz"/>
+                            <constraint firstItem="R8p-Eu-1gw" firstAttribute="trailing" secondItem="0Ic-Y9-tvC" secondAttribute="trailing" id="AUi-f4-UAy"/>
+                            <constraint firstItem="Dar-s9-PcS" firstAttribute="centerX" secondItem="NZM-4u-cBI" secondAttribute="centerX" id="RJg-gd-pWi"/>
+                            <constraint firstItem="Dar-s9-PcS" firstAttribute="leading" secondItem="R8p-Eu-1gw" secondAttribute="leading" constant="129.5" id="Vrl-dK-bCi"/>
+                            <constraint firstItem="R8p-Eu-1gw" firstAttribute="bottom" secondItem="0Ic-Y9-tvC" secondAttribute="bottom" id="Wmj-Ls-jZX"/>
+                            <constraint firstItem="R8p-Eu-1gw" firstAttribute="bottom" secondItem="Dar-s9-PcS" secondAttribute="bottom" constant="30" id="Wra-Ew-OI4"/>
+                            <constraint firstItem="0Ic-Y9-tvC" firstAttribute="leading" secondItem="R8p-Eu-1gw" secondAttribute="leading" id="gom-fG-zd3"/>
+                            <constraint firstItem="R8p-Eu-1gw" firstAttribute="trailing" secondItem="Dar-s9-PcS" secondAttribute="trailing" constant="129.5" id="hud-Gk-Pxv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R8p-Eu-1gw"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="0Ic-Y9-tvC" id="rdu-Jp-nYZ"/>
+                        <outlet property="recordButton" destination="Dar-s9-PcS" id="ore-ML-XDG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oi-u3-Bmx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
