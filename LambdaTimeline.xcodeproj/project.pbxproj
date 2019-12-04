@@ -36,6 +36,7 @@
 		FAD39E7023972A820011E831 /* AudioCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */; };
 		FAD39E72239854C00011E831 /* VideoPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E71239854C00011E831 /* VideoPostViewController.swift */; };
 		FAD39E74239858DE0011E831 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E73239858DE0011E831 /* CameraPreviewView.swift */; };
+		FAD39E7623986CD20011E831 /* VideoPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD39E7523986CD20011E831 /* VideoPostCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCommentTableViewCell.swift; sourceTree = "<group>"; };
 		FAD39E71239854C00011E831 /* VideoPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPostViewController.swift; sourceTree = "<group>"; };
 		FAD39E73239858DE0011E831 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		FAD39E7523986CD20011E831 /* VideoPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPostCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			children = (
 				46CFE7022171572600E7FF73 /* ImagePostCollectionViewCell.swift */,
 				FAD39E6F23972A820011E831 /* AudioCommentTableViewCell.swift */,
+				FAD39E7523986CD20011E831 /* VideoPostCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				4646379C2170091A00E7FF73 /* PostController.swift in Sources */,
 				464637992170048900E7FF73 /* FirebaseConvertible.swift in Sources */,
 				46A0366A21700F5100E7FF73 /* PostsCollectionViewController.swift in Sources */,
+				FAD39E7623986CD20011E831 /* VideoPostCollectionViewCell.swift in Sources */,
 				46D571F52173CF3E00E7FF73 /* UIImage+Ratio.swift in Sources */,
 				FA74942E239719AB0044F0BB /* AudioCommentViewController.swift in Sources */,
 				46463792216FFDD900E7FF73 /* Comment.swift in Sources */,
