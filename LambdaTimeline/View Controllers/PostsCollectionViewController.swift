@@ -47,22 +47,13 @@ class PostsCollectionViewController: UICollectionViewController, UICollectionVie
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let post = postController.posts[indexPath.row]
         
-        switch post.mediaType {
-            
-        case .image:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagePostCell", for: indexPath) as? ImagePostCollectionViewCell else { return UICollectionViewCell() }
-            
-            cell.post = post
-            
-            loadImage(for: cell, forItemAt: indexPath)
-            
-            return cell
-        case .audioURL:
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagePostCell", for: indexPath)
-            
-            return cell
-        }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagePostCell", for: indexPath) as? ImagePostCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.post = post
+        
+        loadImage(for: cell, forItemAt: indexPath)
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -70,17 +61,11 @@ class PostsCollectionViewController: UICollectionViewController, UICollectionVie
         var size = CGSize(width: view.frame.width, height: view.frame.width)
         
         let post = postController.posts[indexPath.row]
+
+        guard let ratio = post.ratio else { return size }
         
-        switch post.mediaType {
-            
-        case .image:
-            
-            guard let ratio = post.ratio else { return size }
-            
-            size.height = size.width * ratio
-        case .audioURL:
-            return size
-        }
+        size.height = size.width * ratio
+   
         
         return size
     }

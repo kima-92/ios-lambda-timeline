@@ -24,7 +24,9 @@ class PostController {
             //
 //            if
             //
-            let imagePost = Post(title: title, mediaURL: mediaURL, ratio: ratio, author: author)
+            let imagePost = Post(title: title, mediaType: mediaType, mediaURL: mediaURL, author: author)
+            
+//            let imagePost = Post(title: title, mediaURL: mediaURL, ratio: ratio, author: author)
             
             self.postsRef.childByAutoId().setValue(imagePost.dictionaryRepresentation) { (error, ref) in
                 if let error = error {
