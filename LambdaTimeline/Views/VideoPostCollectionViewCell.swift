@@ -37,16 +37,16 @@ class VideoPostCollectionViewCell: UICollectionViewCell {
         labelBackgroundView.clipsToBounds = true
     }
     
-//    func setImage(_ image: UIImage?) {
-//        videoView = image
-//        imageView.anim = image
-//    }
-    
     var post: Post? {
         didSet {
             updateViews()
         }
     }
+    
+    //    func setImage(_ image: UIImage?) {
+    //        videoView = image
+    //        imageView.anim = image
+    //    }
     
     func displayVideo(videoURL: URL?) {
         

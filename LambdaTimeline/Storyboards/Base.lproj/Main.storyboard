@@ -160,6 +160,8 @@
                     <connections>
                         <segue destination="1Aw-4e-BW2" kind="show" identifier="AddImagePost" id="jaI-fq-Woc"/>
                         <segue destination="OyM-8q-Icp" kind="show" identifier="ViewImagePost" id="hhs-es-AdQ"/>
+                        <segue destination="anh-hm-eFN" kind="show" identifier="ViewVideoPostSegue" id="eas-qe-LhN"/>
+                        <segue destination="5xP-DV-F7F" kind="show" identifier="AddVideoPostSegue" id="GnJ-Da-ACp"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRz-lg-pQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,7 +253,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-Y9-tvC" customClass="CameraPreviewView" customModule="LambdaTimeline" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-s9-PcS">
@@ -276,6 +278,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R8p-Eu-1gw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4QM-ez-jPJ"/>
                     <connections>
                         <outlet property="cameraView" destination="0Ic-Y9-tvC" id="rdu-Jp-nYZ"/>
                         <outlet property="recordButton" destination="Dar-s9-PcS" id="ore-ML-XDG"/>
@@ -595,6 +598,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5u8-vN-JPs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="veY-Jh-I0R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8V7-4R-fyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

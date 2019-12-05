@@ -21,7 +21,9 @@ class PostController {
         store(mediaData: mediaData, mediaType: mediaType) { (mediaURL) in
             
             guard let mediaURL = mediaURL else { completion(false); return }
-            
+            //
+//            if
+            //
             let imagePost = Post(title: title, mediaURL: mediaURL, ratio: ratio, author: author)
             
             self.postsRef.childByAutoId().setValue(imagePost.dictionaryRepresentation) { (error, ref) in

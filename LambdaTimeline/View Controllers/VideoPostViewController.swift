@@ -132,9 +132,15 @@ class VideoPostViewController: UIViewController {
     private func toggleRecord() {
         if fileOutput.isRecording {
             fileOutput.stopRecording()
+            
+            askForTitleAlert()
         } else {
             fileOutput.startRecording(to: newRecordingURL(), recordingDelegate: self)
         }
+    }
+    
+    private func askForTitleAlert() {
+        // TODO: Ask for a title for this post via alert
     }
     
     func newRecordingURL() -> URL {
