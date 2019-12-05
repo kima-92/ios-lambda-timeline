@@ -288,6 +288,38 @@
             </objects>
             <point key="canvasLocation" x="390" y="1173"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="qra-ag-cmV">
+            <objects>
+                <viewController id="Q6o-qX-PCI" customClass="MapViewController" customModule="LambdaTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hbZ-dw-UAa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5ZO-QH-GvM">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q6o-qX-PCI" id="NCc-9R-HfC"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="5ZO-QH-GvM" secondAttribute="bottom" id="AkL-16-q2z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5ZO-QH-GvM" secondAttribute="trailing" id="Qtc-Kk-Ze0"/>
+                            <constraint firstItem="5ZO-QH-GvM" firstAttribute="top" secondItem="hbZ-dw-UAa" secondAttribute="topMargin" id="Tmw-Hr-Ua5"/>
+                            <constraint firstItem="5ZO-QH-GvM" firstAttribute="leading" secondItem="hbZ-dw-UAa" secondAttribute="leadingMargin" id="UzJ-O0-27A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6f9-Lb-s7t"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="5ZO-QH-GvM" id="TSy-oR-1Ng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UnX-Rl-YhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217" y="-623"/>
+        </scene>
         <!--Title-->
         <scene sceneID="kP9-yp-I8H">
             <objects>
