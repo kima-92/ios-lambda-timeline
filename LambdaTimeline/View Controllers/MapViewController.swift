@@ -13,6 +13,7 @@ import CoreLocation
 class MapViewController: UIViewController {
     
     let locationManager = CLLocationManager()
+    let regionInMeters: Double = 10_000
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -28,6 +29,14 @@ class MapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    // zoom in to user's are by regionInMeters
+    func centerViewOnUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
     // Chacking if location services are even permited in the entire device
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
@@ -41,9 +50,12 @@ class MapViewController: UIViewController {
     
     //Check if WE have permission to use location in THIS app
     func checkLocationAuthorization() {
+        
         switch CLLocationManager.authorizationStatus() {
+            
         case .authorizedWhenInUse :  // uses location only when the app is open  <- prefferable
-            //do map stuff
+            mapView.showsUserLocation = true //puts the blue dot where the user is
+            centerViewOnUserLocation()
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization() // asking fro permission
