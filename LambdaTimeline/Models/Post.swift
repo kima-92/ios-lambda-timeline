@@ -11,15 +11,15 @@ import FirebaseAuth
 
 enum MediaType: String {
     case image
-    case audioURL
+    case video
 }
 
 class Post {
     
-    init(title: String, mediaURL: URL, ratio: CGFloat? = nil, author: Author, timestamp: Date = Date()) {
+    init(title: String, mediaType: MediaType, mediaURL: URL, ratio: CGFloat? = nil, author: Author, timestamp: Date = Date()) {
         self.mediaURL = mediaURL
         self.ratio = ratio
-        self.mediaType = .image
+        self.mediaType = mediaType
         self.author = author
         self.comments = [Comment(text: title, audioURL: nil, author: author)]
         self.timestamp = timestamp
