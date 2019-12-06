@@ -56,6 +56,7 @@ class MapViewController: UIViewController {
         case .authorizedWhenInUse :  // uses location only when the app is open  <- prefferable
             mapView.showsUserLocation = true //puts the blue dot where the user is
             centerViewOnUserLocation()
+            locationManager.startUpdatingLocation() // to update location as it moves
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization() // asking fro permission
@@ -90,11 +91,20 @@ class MapViewController: UIViewController {
 
 extension MapViewController: CLLocationManagerDelegate {
     
+    // This func runs every time the user moves (re-locates)
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // Later..
+        
+        guard let location = locations.last else { return }
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        
+        mapView.setRegion(region, animated: true)
     }
     
+    //This runs everytime the authirization changes. (If user did or not give permission)
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        // later
+        
+        checkLocationAuthorization()
     }
 }

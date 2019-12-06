@@ -8,21 +8,23 @@
 
 import Foundation
 import FirebaseAuth
+import MapKit
 
 enum MediaType: String {
     case image
     case video
 }
 
-class Post {
+class Post: NSObject {
     
-    init(title: String, mediaType: MediaType, mediaURL: URL, ratio: CGFloat? = nil, author: Author, timestamp: Date = Date()) {
+    init(title: String, mediaType: MediaType, mediaURL: URL, ratio: CGFloat? = nil, author: Author, timestamp: Date = Date(), geotag: CLLocationCoordinate2D?) {
         self.mediaURL = mediaURL
         self.ratio = ratio
         self.mediaType = mediaType
         self.author = author
         self.comments = [Comment(text: title, audioURL: nil, author: author)]
         self.timestamp = timestamp
+        self.geotag = geotag
     }
     
     init?(dictionary: [String : Any], id: String) {
@@ -33,7 +35,9 @@ class Post {
             let authorDictionary = dictionary[Post.authorKey] as? [String: Any],
             let author = Author(dictionary: authorDictionary),
             let timestampTimeInterval = dictionary[Post.timestampKey] as? TimeInterval,
-            let captionDictionaries = dictionary[Post.commentsKey] as? [[String: Any]] else { return nil }
+            let captionDictionaries = dictionary[Post.commentsKey] as? [[String: Any]],
+            let geotag = dictionary[Post.geotagKey] as? [String: Any] // TODO: not sure
+            else { return nil }
         
         self.mediaURL = mediaURL
         self.mediaType = mediaType
@@ -42,6 +46,8 @@ class Post {
         self.timestamp = Date(timeIntervalSince1970: timestampTimeInterval)
         self.comments = captionDictionaries.compactMap({ Comment(dictionary: $0) })
         self.id = id
+//        self.geotag?.latitude = geotag.values[0] as? Int
+//        self.geotag?.longitude = geotag.values[1]
     }
     
     var dictionaryRepresentation: [String : Any] {
@@ -65,6 +71,7 @@ class Post {
     var comments: [Comment]
     var id: String?
     var ratio: CGFloat?
+    var geotag: CLLocationCoordinate2D?
     
     var title: String? {
         return comments.first?.text
@@ -77,4 +84,20 @@ class Post {
     static private let commentsKey = "comments"
     static private let timestampKey = "timestamp"
     static private let idKey = "id"
+    static private let geotagKey = "geotag"
+
 }
+//extension Post: MKAnnotation {
+//
+//
+//    
+//    var coordinate: CLLocationCoordinate2D {
+//        return CLLocationCoordinate2D(latitude: , longitude: )
+//    }
+//    
+//    var title: String? 
+//    
+//    var subtitle: String?
+//    
+//    
+//}
