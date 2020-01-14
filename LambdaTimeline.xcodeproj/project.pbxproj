@@ -108,11 +108,11 @@
 		4646377A216FDE4B00E7FF73 /* LambdaTimeline */ = {
 			isa = PBXGroup;
 			children = (
+				46463797216FFF7400E7FF73 /* Storyboards */,
 				46CFE7042171572900E7FF73 /* Views */,
 				46A0366B21700F6100E7FF73 /* View Controllers */,
 				4646379A2170090900E7FF73 /* Model Controllers */,
 				46463795216FFF5800E7FF73 /* Models */,
-				46463797216FFF7400E7FF73 /* Storyboards */,
 				46CFE7062171573F00E7FF73 /* Helpers */,
 				46463796216FFF6900E7FF73 /* Resources */,
 			);
